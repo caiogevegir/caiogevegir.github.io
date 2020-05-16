@@ -444,8 +444,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Autor</span><br>
 <span id="email" class="email"><a href="mailto:caiogevegir@hotmail.com">caiogevegir@hotmail.com</a></span><br>
-<span id="revnumber">version 1.0,</span>
-<span id="revdate">2020-05-10</span>
+<span id="revnumber">version 0.2,</span>
+<span id="revdate">2020-05-17</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -502,7 +502,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#abilities">Habilidades</a></li>
 <li><a href="#ailments">Condições Adversas</a></li>
 <li><a href="#death">Morte de um Personagem</a></li>
-<li><a href="#healing">Recuperando [PV] e [PT]</a>
+<li><a href="#healing">Recuperando as Energias</a>
 <ul class="sectlevel2">
 <li><a href="#_fazendo_refeições">Fazendo Refeições</a></li>
 <li><a href="#_descansando">Descansando</a></li>
@@ -545,7 +545,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="imageblock right">
 <div class="content">
-<img src="img/sheet.png" alt="sheet">
+<img src="src/img/sheet.png" alt="sheet">
 </div>
 </div>
 <div class="paragraph">
@@ -816,6 +816,9 @@ Essas fórmulas podem assustar os que não são muito fãs de matemática, mas e
 <div class="paragraph">
 <p>Você é super inteligente, ou tem uma capacidade supreendente de aprender coisas novas ou ser multitarefa. Você poderá adquirir os conhecimentos práticos da sua profissão secundária.</p>
 </div>
+<div class="paragraph">
+<p>Personagens com Genialidade não podem ser Inculto!</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_membros_elásticos">Membros Elásticos</h4>
@@ -967,6 +970,9 @@ Voto de Pobreza
 <h4 id="_inculto">Inculto</h4>
 <div class="paragraph">
 <p>Você tem dificuldades sérias de aprendizado. Você não poderá ter profissões.</p>
+</div>
+<div class="paragraph">
+<p>Personagens Incultos não podem ter Genialidade!</p>
 </div>
 </div>
 <div class="sect3">
@@ -1189,6 +1195,11 @@ O Mestre da aventura não só pode, como deve, explorar ao máximo as virtudes e
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sucesso</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Garante um sucesso automático simples em um teste. Deve ser utilizado <strong>antes</strong> de realizar a rolagem.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determinação</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se estiver desmaiado, despertará com 25% do <code>[PV]</code> e se livrará das condições adversas, mas ainda não poderá agir no turno. Deve ser utilizando <strong>antes</strong> de realizar a rolagem (ver Morte de um Personagem).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PE]</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Deus-Ex</p></td>
@@ -2389,6 +2400,13 @@ Para melhor interpretação do combate, imagine o campo de batalha como um grand
 <td class="tableblock halign-left valign-top"><p class="tableblock">Um ataque poderoso com efeito crítico garantido caso tenha sucesso no acerto</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ataque Preciso</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ofensivo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Idem ao da arma</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PT]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Um ataque minucioso de sucesso automático que causará exatamente <code>1 [PV]</code> de dano ao alvo aliado, ideal para curar atordoamentos e confusões leves de aliados. Em inimigos, causará dano apenas se sua <code>[FA]</code> for maior que a <code>[FD]</code> do alvo</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Analisar</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Suporte</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6 <em>grids</em></p></td>
@@ -2415,13 +2433,6 @@ Para melhor interpretação do combate, imagine o campo de batalha como um grand
 <td class="tableblock halign-left valign-top"><p class="tableblock">Próprio</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PT]</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Torna-se invisível e inalvejável pelos inimigos, até realizar um ataque ou ser detectado, caso tenha sucesso em um Teste de Destreza ou Inteligência</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fogo Amigo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ofensivo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Idem ao da arma</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PT]</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Um "ataque" controlado que causa apenas <code>1 [PV]</code> de dano ao alvo, ideal para curar atordoamentos e confusões leves. A chance de acerto será apenas a <code>[PR]</code> do atacante. Caso falhe, o alvo receberá o dano na íntegra, inclusive efeitos críticos quando aplicáveis!</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Intimidar</p></td>
@@ -2638,13 +2649,29 @@ Ao contrário do senso comum de alguns RPGs, repouso <strong>não</strong> irá 
 <h2 id="death">Morte de um Personagem</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Um personagem correrá risco de morte assim que estiver desmaiado, isto é, atingir <code>0 [PV]</code> ou menos. Personagens podem continuar sendo atacados enquanto desmaiados, podendo ficar com <code>[PV] negativo</code>. Um personagem irá morrer ao atingir <code>-5 [PV]</code>.</p>
+<p>Um personagem correrá risco de morte assim que estiver desmaiado, isto é, atingir <code>0 [PV]</code> ou menos. Personagens podem continuar sendo atacados enquanto desmaiados, podendo ficar com <code>[PV] negativo</code>. <strong>Um personagem irá morrer ao atingir <code>-5 [PV]</code></strong>.</p>
 </div>
 <div class="paragraph">
-<p>Um personagem desmaiado também irá perder <code>1 [PV]</code> por rodada - ou a cada 10 minutos - enquanto não for reanimado. Entretanto, utilizar Primeiros Socorros poderá estabilizá-lo, evitando que perca <code>[PV]</code> enquanto não receber dano novamente.</p>
+<p>A cada turno, ou a cada 10 minutos, um personagem desmaiado fará um Teste de Vigor Difícil:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Em caso de <code>sucesso crítico</code>, recobrará a consciência com <code>1 [PV]</code>, mas não poderá agir no turno;</p>
+</li>
+<li>
+<p>Em caso de <code>sucesso comum</code>, continuará desmaiado, mas não perderá <code>[PV]</code>;</p>
+</li>
+<li>
+<p>Em caso de <code>falha comum</code>, perderá <code>1 [PV]</code>;</p>
+</li>
+<li>
+<p>Em caso de <code>falha crítica</code>, perderá <code>3 [PV]</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Um personagem irá deixar de correr risco de morte ao ser reanimado com sucesso em combate ou em um hospital.</p>
+<p>Um personagem irá deixar de correr risco de morte ao se recobrar automaticamente com o <code>sucesso crítico</code> do teste anterior ou ser reanimado com sucesso em combate ou em um hospital.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -2662,7 +2689,7 @@ Desmaio <strong>não</strong> elimina os efeitos de outras condições adversas 
 </div>
 </div>
 <div class="sect1 text-justify">
-<h2 id="healing">Recuperando [PV] e [PT]</h2>
+<h2 id="healing">Recuperando as Energias</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Em <strong>LPD100</strong>, existem quatro maneiras de recuperar <code>[PV]</code> e <code>[PT]</code>: fazendo refeições, descansando, bebendo poções ou indo a um médico.</p>
@@ -2833,8 +2860,8 @@ Uma refeição boa e um descanso médio já são o suficiente para recuperar tod
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0<br>
-Last updated 2020-05-10 18:38:48 -0300
+Version 0.2<br>
+Last updated 2020-05-16 14:16:04 -0300
 </div>
 </div>
 </body>
