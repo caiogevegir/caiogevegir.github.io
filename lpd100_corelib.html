@@ -438,35 +438,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="article toc2 toc-left text-justify">
 <div id="header">
 <h1>LPD100 - Corelib</h1>
 <div class="details">
 <span id="author" class="author">Autor</span><br>
 <span id="email" class="email"><a href="mailto:caiogevegir@hotmail.com">caiogevegir@hotmail.com</a></span><br>
-<span id="revnumber">version 0.2,</span>
-<span id="revdate">2020-05-17</span>
+<span id="revnumber">version 0.3,</span>
+<span id="revdate">2020-05-23</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#principles">Fundamentos</a></li>
-<li><a href="#sheet">Montando Seu Personagem</a>
+<li><a href="#character">Montando Seu Personagem</a>
 <ul class="sectlevel2">
 <li><a href="#main_attributes">Atributos Principais</a></li>
-<li><a href="#_atributos_secundários">Atributos Secundários</a></li>
+<li><a href="#secondary_attributes">Atributos Secundários</a></li>
+</ul>
+</li>
+<li><a href="#experience">Experiência</a>
+<ul class="sectlevel2">
+<li><a href="#_como_adquirir">Como Adquirir?</a></li>
+<li><a href="#_onde_investir">Onde Investir?</a></li>
 </ul>
 </li>
 <li><a href="#virtue">Virtudes &amp; Fraquezas</a>
 <ul class="sectlevel2">
 <li><a href="#_virtudes">Virtudes</a></li>
 <li><a href="#_fraquezas">Fraquezas</a></li>
-</ul>
-</li>
-<li><a href="#experience">Desenvolvendo Seu Personagem</a>
-<ul class="sectlevel2">
-<li><a href="#_como_adquirir_experiência">Como Adquirir Experiência?</a></li>
-<li><a href="#_onde_investir_experiência">Onde Investir Experiência?</a></li>
 </ul>
 </li>
 <li><a href="#jobs">Profissões</a>
@@ -518,34 +518,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="principles">Fundamentos</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>LPD100</strong> foi escrito com o objetivo de ser um sistema simples e prático de ser aplicado. Como o nome busca simbolizar, tudo o que você precisará para jogar serão um <strong>L</strong>ápis, um <strong>P</strong>apel e um <strong>D100</strong>. E, é claro, bastante criatividade.</p>
+<p><strong>LPD100</strong> foi escrito com o objetivo de ser um sistema de rpg minimalista. Isto é, com o objetivo de ser simples de entender suas regras e prático de ser implementado, sem ser necessário ter um conhecimento aprofundado de jogos analógicos ou eletrônicos ou outros sistemas de rpg. Como seu nome busca simbolizar, tudo o que você precisará para jogar serão um <strong>L</strong>ápis, um <strong>P</strong>apel e um <strong>D</strong>ado de <strong>100</strong> faces. E, é claro, bastante criatividade.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Não tem um dado de 100 faces? Não tem problema: você pode utilizar um aplicativo no telefone para simular as rolagens de 1 a 100.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Como nada se perde e nada se cria, tudo se transforma, você verá inspirações em outros sistemas e jogos eletrônicos durante este manual, como <em>Fire Emblem</em>, D&amp;D, 3D&amp;T, <em>Storyteller</em>, etc. Portanto, já deixo meu agradecimento a todos os criadores desses jogos tanto pelos conhecimentos adquiridos quanto pelas boas lembranças!</p>
+<p>Neste sistema, busca-se seguir uma regra de ouro: <em>"Qualquer situação, seja combate ou teste, deve ser resolvida em uma única rolagem. Esta deve ser feita sempre apenas pelo jogador ativo"</em>.</p>
 </div>
 <div class="paragraph">
-<p>Importante ressaltar também que o sistema é <em>open-source</em>, isto é, todos estão convidados a darem suas sugestões e proporem melhorias e expansões para ele, prezando sempre pela simplicidade do mesmo.</p>
+<p>Como nada se perde e nada se cria, tudo se transforma, você verá inspirações em outros sistemas e jogos eletrônicos durante este manual, como <em>Fire Emblem</em>, <em>The Legend of Heroes</em>, D&amp;D, 3D&amp;T, <em>Storyteller</em>, etc. Portanto, já deixo meu agradecimento a todos os criadores desses jogos tanto pelos conhecimentos adquiridos quanto pelas boas lembranças!</p>
 </div>
 <div class="paragraph">
-<p><strong>LPD100</strong> também incentiva a livre cosmética: os jogadores serão livres para usarem sua criatividade - e bom senso - ao detalharem as características físicas e mentais de seus personagens como quiserem, bastando adaptá-los numericamente às mecânicas do sistema.</p>
+<p>Importante ressaltar também que todos estão convidados a darem suas sugestões e proporem melhorias e expansões para este sistema, prezando sempre pela simplicidade do mesmo.</p>
 </div>
 <div class="paragraph">
-<p>A respeito de mecânicas, é recomendado fortemente o uso de <em>grids</em>, como em um bom <em>s-rpg</em>, uma vez que atributos como movimentação e alcance serão bastante explorados em combates e testes.</p>
+<p><strong>LPD100</strong> incentiva a livre cosmética: os jogadores serão livres para usarem sua criatividade - e bom senso - ao detalharem as características físicas e mentais de seus personagens, bastando adaptá-las numericamente às mecânicas do sistema.</p>
 </div>
 <div class="paragraph">
-<p>A respeito de simplicidade, busca-se seguir uma regra básica: <em>"Qualquer situação, seja combate ou teste, deve ser resolvida em uma única rolagem de D100. Este deve ser rolado sempre apenas pelo jogador ativo"</em>.</p>
+<p>A respeito de mecânicas, é recomendado fortemente o uso de <em>grids</em> neste sistema, uma vez que atributos como movimentação e alcance serão bastante explorados em combates e testes. Será utilizado, como padrão, um <em>grid</em> quadriculado pois é o mais fácil de ser implementado. Entretanto, fique à vontade para explorar outros modelos de <em>grid</em>, como o hexagonal.</p>
 </div>
 <div class="paragraph">
-<p>A respeito de números, sempre trabalhar com múltiplos de 5. Arredondamentos sempre serão feitos para cima.</p>
+<p>A respeito de números, sempre trabalhar com múltiplos de 5 ao determinar modificadores em testes. Caso alguma operação de divisão seja feita e resulte em número decimal, arredondamentos sempre serão feitos para cima.</p>
 </div>
 </div>
 </div>
 <div class="sect1 text-justify">
-<h2 id="sheet">Montando Seu Personagem</h2>
+<h2 id="character">Montando Seu Personagem</h2>
 <div class="sectionbody">
 <div class="imageblock right">
 <div class="content">
-<img src="src/img/sheet.png" alt="sheet">
+<img src="corelib/img/sheet.png" alt="sheet">
 </div>
 </div>
 <div class="paragraph">
@@ -594,7 +606,7 @@ Influencia <strong>Iniciativa</strong>, <strong>Esquiva</strong> e <strong>Movim
 <h4 id="_inteligência_i">Inteligência - [I]</h4>
 <div class="paragraph">
 <p>Resiliência e sabedoria de um personagem.<br>
-Influencia <strong>Força de Defesa Mágica</strong>, <strong>Pontos de Técnica</strong> e <strong>Quantidade de Perícias</strong>.</p>
+Influencia <strong>Força de Defesa Mágica</strong>, <strong>Pontos de Técnica</strong> e quantidade de <strong>Profissões Secundárias</strong>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -630,22 +642,26 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_atributos_secundários">Atributos Secundários</h3>
+<h3 id="secondary_attributes">Atributos Secundários</h3>
 <div class="paragraph">
-<p>São atributos cujos valores são derivados dos atributos principais, mas não são menos importantes por isso. Pelo contrário, atributos secundários serão largamente utilizados em combate e fundamentais para suas estratégias.</p>
+<p>São atributos cujos valores são derivados dos atributos principais, mas são tão importantes quanto. Atributos secundários serão largamente utilizados em combate e fundamentais para suas estratégias.</p>
 </div>
 <div class="sect3">
 <h4 id="_iniciativa_ini">Iniciativa - [INI]</h4>
 <div class="paragraph">
 <p>É utilizada para decidir a ordem dos turnos em um combate. Os personagens que tiverem a maior <strong>Agilidade</strong> - e um pouco de <strong>Carisma</strong> - atacam primeiro.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[A]*2 + [C] + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -653,13 +669,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Poder ofensivo do personagem. Se estiver atacando corpo-a-corpo, o atributo base será <strong>Força</strong>, caso estiver à distância, será <strong>Destreza</strong>.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[F ou D] + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -667,13 +687,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Poder defensivo do personagem contra ataques físicos. Os que tiverem mais <strong>Vigor</strong> serão os que menos sofrerão.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[V] + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -681,13 +705,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Poder defensivo do personagem contra ataques mágicos. Aqui, resistirão os que tiverem mais <strong>Inteligência</strong>.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[I] + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -695,13 +723,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Pontaria do seu personagem. Grandes valores de <strong>Destreza</strong> aumentarão suas chances de acerto de seus golpes.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>75 + [D]*5 + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -709,13 +741,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Reflexos de combate do seu personagem. Grandes valores de <strong>Agilidade</strong> aumentarão suas chances de desviar de golpes inimigos.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[A]*5 + modificadores</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -723,13 +759,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Vida, ou "barra de <em>HP</em>" do seu personagem. Se chegar a zero, estará nocauteado. Invista em <strong>Vigor</strong> e <strong>Força</strong> se quiser durar bastante no campo de batalha.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[V]*3 + [F]*2</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -737,13 +777,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Mana, energia, chi, etc do seu personagem. Se chegar a zero, não será capaz de utilizar habilidades. Invista em <strong>Inteligência</strong> e <strong>Destreza</strong> se irá se aproveitar de suas técnicas.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[I]*3 + [D]*2</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -751,13 +795,17 @@ Monte um personagem equilibrado distribuindo <strong>2 pontos</strong> em todos 
 <div class="paragraph">
 <p>Deslocamento do seu personagem, seja em metros, seja em <em>grids</em>. Os que tiverem maior <strong>Agilidade</strong> e <strong>Vigor</strong> poderão ir longe.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Fórmula</dt>
-<dd>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Fórmula
+</td>
+<td class="hdlist2">
 <p><code>[A]*2 + [V]</code></p>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -775,11 +823,147 @@ Essas fórmulas podem assustar os que não são muito fãs de matemática, mas e
 </div>
 </div>
 </div>
-<div class="sect1 text-jsutify">
+<div class="sect1 text-justify">
+<h2 id="experience">Experiência</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Em uma aventura, não há nada mais gratificante do que ver seu personagem se tornando mais forte ou mais esperto conforme progride na história. Este capítulo irá abordar a principal recompensa de um aventureiro: Experiência - <code>[PE]</code>.</p>
+</div>
+<div class="paragraph">
+<p>Em RPGs tradicionais, estamos acostumados a adquirir experiência batalhando monstros ou resolvendo enigmas complexos; quando atingimos uma quantidade específica dessa experiência, temos o famoso <em>Level Up</em>, onde você ganha mais pontos para distribuir nos atributos do seu persoangem. Em <strong>LPD100</strong>, o espírito ainda é o mesmo, porém, ela também poderá ser utilizada para outros fins que podem mudar os rumos de uma história. Por isso, neste sistema, encare sua experiência adquirida como uma "moeda de troca" valiosa.</p>
+</div>
+<div class="sect2">
+<h3 id="_como_adquirir">Como Adquirir?</h3>
+<div class="paragraph">
+<p>A tabela abaixo descreve de quais maneiras um personagem pode adquirir experiência no decorrer de sua aventura:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 62.5%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Feito</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Descrição</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Recompensa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Presente</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Participou da sessão do começo ao fim.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dedicado</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interpretou bem seu personagem durante a sessão.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lutador</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu a uma batalha.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code> por batalha</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Astuto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solucionou um enigma ou um conflito que necessitasse diálogo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code> por conflito</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guerreiro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu a um <strong>sub-chefe</strong> da campanha.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3 [PE]</code> por sub-chefe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heroi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu ao <strong>chefe</strong> da campanha.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Onipresente</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Participou de todas as sessões da campanha do começo ao fim.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PE]</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Fica a critério do Mestre distribuir os <code>[PE]</code> ao final da sessão ou no ato da conquista.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_onde_investir">Onde Investir?</h3>
+<div class="paragraph">
+<p>A tabela abaixo descreve quais as utilidades da experiência em <strong>LPD100</strong> e seus respectivos custos:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 71.4285%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Bônus</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Descrição</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Custo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aprimoramento</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adiciona melhoramentos à sua arma ou vestimenta.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reparos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repara um equipamento quebrado. Ele perde os aprimoramentos ou reduz um nível deles, quando aplicável.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Salário</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concede 100 moedas ao personagem.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sucesso</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Garante um sucesso automático simples em um teste. Deve ser utilizado <strong>antes</strong> de realizar a rolagem.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determinação</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se estiver desmaiado, despertará com 25% do <code>[PV]</code> e se livrará das condições adversas, mas ainda não poderá agir no turno. Deve ser utilizando <strong>antes</strong> de realizar a rolagem (ver Morte de um Personagem).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deus-Ex</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ameniza uma falha crítica, tornando-a uma falha simples.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressurreição</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Revive seu personagem. Deve ser utilizado ao fim da sessão ou campanha.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 [PE]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Level Up</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concede 1 ponto extra para distribuir nos Atributos Principais do personagem.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10 [PE]</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Fica a critério do Mestre permitir, ou não, ressurreição!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="virtue">Virtudes &amp; Fraquezas</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Não só de números, se constitui um personagem. Em <strong>LPD100</strong>, ele também poderá adquirir virtudes e fraquezas para compor seu desenvolvimento. Elas podem ser características tanto biológicas quanto mentais. Um personagem poderá ter:</p>
+<p>Após distribuir as pontuações nos atributos do personagem, ele também poderá adquirir características tanto biológicas quanto mentais para seu desenvolvimento. Um personagem poderá ter:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -795,7 +979,10 @@ Essas fórmulas podem assustar os que não são muito fãs de matemática, mas e
 </ul>
 </div>
 <div class="paragraph">
-<p>A critério do Mestre, um personagem poderá adquirir novas virtudes ou se livrar de suas fraquezas no decorrer da campanha, ou permanecerá com elas, e somente elas, até o fim.</p>
+<p>A critério do Mestre, um personagem poderá adquirir novas virtudes ou se livrar de suas fraquezas no decorrer da campanha. Caso contrário, permanecerão com suas virtudes e fraquezas até o fim.</p>
+</div>
+<div class="paragraph">
+<p>Segue, abaixo, a lista das virtudes e fraquezas que um personagem poderá adquirir:</p>
 </div>
 <div class="sect2">
 <h3 id="_virtudes">Virtudes</h3>
@@ -814,7 +1001,7 @@ Essas fórmulas podem assustar os que não são muito fãs de matemática, mas e
 <div class="sect3">
 <h4 id="_genialidade">Genialidade</h4>
 <div class="paragraph">
-<p>Você é super inteligente, ou tem uma capacidade supreendente de aprender coisas novas ou ser multitarefa. Você poderá adquirir os conhecimentos práticos da sua profissão secundária.</p>
+<p>Você é super inteligente, ou tem uma capacidade supreendente de aprender coisas novas ou ser multitarefa. Você poderá adquirir os conhecimentos práticos de uma das suas sua profissões secundárias.</p>
 </div>
 <div class="paragraph">
 <p>Personagens com Genialidade não podem ser Inculto!</p>
@@ -1051,7 +1238,7 @@ Mentiroso
 </tr>
 <tr>
 <td class="hdlist1">
-Obesessão
+Obsessão
 </td>
 <td class="hdlist2">
 <p>Você é completamente devoto a sua missão e não aceita qualquer desvio em seus objetivos;</p>
@@ -1078,8 +1265,6 @@ Paranoico
 </td>
 <td class="content">
 O Mestre da aventura não só pode, como deve, explorar ao máximo as virtudes e as fraquezas dos personagens em sua história.
-:imagesdir: ./img
-:icons: font
 </td>
 </tr>
 </table>
@@ -1089,146 +1274,13 @@ O Mestre da aventura não só pode, como deve, explorar ao máximo as virtudes e
 </div>
 </div>
 <div class="sect1 text-justify">
-<h2 id="experience">Desenvolvendo Seu Personagem</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Em uma aventura, não há nada mais gratificante do que ver seu personagem se tornando mais forte ou mais esperto conforme progride na história. Este capítulo irá abordar a principal recompensa de um aventureiro: Experiência - <code>[PE]</code>.</p>
-</div>
-<div class="paragraph">
-<p>Em RPGs tradicionais, estamos acostumados a adquirir experiência batalhando monstros ou resolvendo enigmas complexos; quando atingimos uma quantidade específica dessa experiência, temos o famoso <em>Level Up</em>, onde você ganha mais pontos para distribuir nos atributos do seu persoangem. Em <strong>LPD100</strong>, o espírito ainda é o mesmo, porém, ela também poderá ser utilizada para outros fins que podem mudar os rumos de uma história. Por isso, neste sistema, encare sua experiência adquirida como uma "moeda de troca" valiosa.</p>
-</div>
-<div class="sect2">
-<h3 id="_como_adquirir_experiência">Como Adquirir Experiência?</h3>
-<div class="paragraph">
-<p>A tabela abaixo descreve de quais maneiras um personagem pode adquirir experiência no decorrer de sua aventura:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 12.5%;">
-<col style="width: 62.5%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Feito</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Descrição</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Recompensa</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Presente</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Participou da sessão do começo ao fim.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dedicado</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interpretou bem seu personagem durante a sessão.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lutador</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu a uma batalha.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code> por batalha</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Astuto</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solucionou um enigma ou um conflito que necessitasse diálogo.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code> por conflito</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Guerreiro</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu a um <strong>sub-chefe</strong> da campanha.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3 [PE]</code> por sub-chefe</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Heroi</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Venceu e sobreviveu ao <strong>chefe</strong> da campanha.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Onipresente</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Participou de todas as sessões da campanha do começo ao fim.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PE]</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Fica a critério do Mestre dar os <code>[PE]</code> ao final da sessão ou no ato da conquista.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_onde_investir_experiência">Onde Investir Experiência?</h3>
-<div class="paragraph">
-<p>A tabela abaixo descreve quais as utilidades da experiência em <strong>LPD100</strong> e seus respectivos custos:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 14.2857%;">
-<col style="width: 71.4285%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Bônus</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Descrição</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Custo</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aprimoramento</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Adiciona melhoramentos à sua arma ou vestimenta.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reparos</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Repara um equipamento quebrado. Ele perde os aprimoramentos ou reduz um nível deles, quando aplicável.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Salário</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Concede 100 moedas ao personagem.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sucesso</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Garante um sucesso automático simples em um teste. Deve ser utilizado <strong>antes</strong> de realizar a rolagem.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Determinação</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se estiver desmaiado, despertará com 25% do <code>[PV]</code> e se livrará das condições adversas, mas ainda não poderá agir no turno. Deve ser utilizando <strong>antes</strong> de realizar a rolagem (ver Morte de um Personagem).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deus-Ex</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ameniza uma falha crítica, tornando-a uma falha simples.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressurreição</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Revive seu personagem. Deve ser utilizado ao fim da sessão ou campanha.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 [PE]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Level Up</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Concede 1 ponto extra para distribuir nos Atributos Principais do personagem.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10 [PE]</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Fica a critério do Mestre permitir, ou não, ressurreição!</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 text-justify">
 <h2 id="jobs">Profissões</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Em <strong>LPD100</strong>, profissões concentram a área do saber em diversos grupos. Elas envolvem tanto conhecimentos e aptidões teóricos quanto a capacidade de aplicação prática da mesma durante a aventura. Personagens podem ter uma profissão principal, tendo os conhecimentos teóricos e práticos dela, e múltiplas profissões secundárias, estas tendo apenas o conhecimento teórico. Um personagem pode ter uma profissão secundária para cada dois pontos em Inteligência.</p>
+<p>Em <strong>LPD100</strong>, profissões concentram a área do saber em diversos grupos. Elas envolvem tanto conhecimentos e aptidões teóricos quanto a capacidade de aplicação prática da mesma. Personagens podem ter uma profissão principal, tendo os conhecimentos teóricos e práticos dela, e múltiplas profissões secundárias, estas tendo apenas o conhecimento teórico. Um personagem pode ter <strong>uma profissão secundária para cada dois pontos em Inteligência</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Segue abaixo, a lista de profissões disponíveis em <strong>LPD100</strong>:</p>
 </div>
 <div class="sect2">
 <h3 id="_acadêmico">Acadêmico</h3>
@@ -1295,14 +1347,6 @@ Idiomas
 </td>
 <td class="hdlist2">
 <p>Leitura e compreensão de múltiplos idiomas, inclusive extintos.<br></p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-Metalurgia
-</td>
-<td class="hdlist2">
-<p>Minérios, materiais, forja, etc.<br></p>
 </td>
 </tr>
 <tr>
@@ -1643,8 +1687,6 @@ Prático
 </td>
 <td class="content">
 Para deixar a leitura e a compreensão mais fluida, Atributos Principais, Atributos Secundários serão referenciados por meio de suas respectivas siglas daqui em diante. Profissões, em geral, serão referenciadas pela sigla <code>[P]</code>.
-:imagesdir: ./img
-:icons: font
 </td>
 </tr>
 </table>
@@ -1656,10 +1698,10 @@ Para deixar a leitura e a compreensão mais fluida, Atributos Principais, Atribu
 <h2 id="equipment">Equipamentos</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Seu personagem tomou forma. A próxima etapa será equipá-lo com uma <strong>arma</strong> e uma <strong>vestimenta</strong>.</p>
+<p>Seu personagem tem atributos, virtudes, fraquezas e profissões. A próxima etapa será equipá-lo com uma <strong>arma</strong> e uma <strong>vestimenta</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Em <strong>LPD100</strong>, um personagem é livre para descrever seus equipamentos como quiser: uma <em>katana</em>, um sabre de luz, um machado, uma pistola, um arco-e-flecha, um estilingue, um cajado, uma armadura, uma roupa comum, um traje de batalha, etc. Desde que estes sejam coerentes com o universo onde a campanha se passa e, é claro, tenham a aprovação do Mestre. Além disso, elas precisam se encaixar nas características que serão descritas abaixo. Características que irão influenciar no comportamento dos equipamentos durante o combate.</p>
+<p>Em <strong>LPD100</strong>, um personagem é livre para descrever seus equipamentos como quiser: uma <em>katana</em>, um sabre de luz, um machado, uma pistola, um arco-e-flecha, um estilingue, um cajado, uma armadura, uma roupa comum, um traje de batalha, etc desde que estes sejam coerentes com o universo onde a campanha se passa e, é claro, tenham a aprovação do Mestre. Além disso, elas precisam se encaixar nas características que serão descritas abaixo.</p>
 </div>
 <div class="paragraph">
 <p>Todo personagem inicial terá direito a uma arma e vestimenta gratuita. Novos equipamentos precisarão ser adquiridos em lojas ou como "espólios de guerra".</p>
@@ -1915,8 +1957,20 @@ Por <code>[FD]</code>, entende-se que afetará tanto <code>[FDf]</code> quanto <
 </div>
 <div class="sect2">
 <h3 id="_aprimoramentos">Aprimoramentos</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Este sub-capítulo aborda conceitos que ainda serão explicados: Testes. Aconselha-se dar uma lida em seu capítulo antes e, logo após, retomar a leitura para entender este sub-capítulo melhor!
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>Em <strong>LPD100</strong>, você poderá aprimorar seus equipamentos. Aprimoramentos poderão ser realizados por ferreiros em cidades, ou por quem tem a profissão Ferreiro, sob o custo de <code>1 [PE]</code>, o preço do serviço, em moedas, e um teste cuja dificuldade varia para cada tipo de aprimoramento (veja abaixo).</p>
+<p>Em <strong>LPD100</strong>, você poderá aprimorar seus equipamentos. Aprimoramentos poderão ser realizados por ferreiros em cidades, ou por quem tem a profissão primária Ferreiro, sob o custo de <code>1 [PE]</code>, o preço do serviço, em moedas, e um teste cuja dificuldade varia para cada tipo de aprimoramento (veja abaixo).</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2087,7 +2141,7 @@ Em <strong>LPD100</strong>, existem duas maneiras de fortalecer seu personagem:<
 <h2 id="tests">Testes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Testes são o mecanismo principal de um sistema de RPG para determinar o sucesso ou o fracasso da ação de um personagem durante a aventura. Em <strong>LPD100</strong>, os testes exigirão um Atributo Principal ou um dos cinco sentidos - <strong>Visão</strong>, <strong>Audição</strong>, <strong>Olfato</strong>, <strong>Tato</strong> e <strong>Paladar</strong> - e, sempre que possível, uma Perícia. A fórmula dos testes é descrita abaixo:</p>
+<p>Testes são o mecanismo principal de um sistema de RPG para determinar o sucesso ou o fracasso da ação de um personagem durante a aventura. Em <strong>LPD100</strong>, os testes exigirão um Atributo Principal ou um dos cinco sentidos - <strong>Visão</strong>, <strong>Audição</strong>, <strong>Olfato</strong>, <strong>Tato</strong> e <strong>Paladar</strong> - e, sempre que possível, uma Profissão. A fórmula dos testes é descrita abaixo:</p>
 </div>
 <div class="hdlist">
 <table>
@@ -2152,26 +2206,26 @@ Acerto para Sentidos
 </tbody>
 </table>
 <div class="paragraph">
-<p>Fica a critério do Mestre e dos jogadores negociarem qual atributo, qual perícia e qual dificuldade são mais apropriadas para realizar um determinado teste.</p>
+<p>Fica a critério do Mestre e dos Jogadores negociarem qual atributo, qual profissão e qual dificuldade são as mais adequadas para determinar a realização do teste.</p>
 </div>
 <div class="sect2">
 <h3 id="_sucessos_e_falhas_de_um_teste">Sucessos e Falhas de um Teste</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Será considerado <code>Sucesso</code> rolagens que forem menores ou iguais ao valor do acerto do teste;</p>
+<p>Será considerado <code>Sucesso</code> rolagens que forem <strong>menores ou iguais</strong> ao valor do acerto do teste;</p>
 </li>
 <li>
-<p>Será considerado <code>Sucesso Crítico</code> rolagens que forem entre 1 e 10. Testes com acerto menor ou igual a 49 não podem ter <code>Sucesso Críico</code>;</p>
+<p>Será considerado <code>Sucesso Crítico</code> rolagens que forem entre <strong>1 e 10</strong>. Testes com acerto menor ou igual a 49 não podem ter <code>Sucesso Crítico</code>;</p>
 </li>
 <li>
-<p>Será considerado <code>Falha</code> rolagens que forem maiores do que o valor do acerto do teste;</p>
+<p>Será considerado <code>Falha</code> rolagens que forem <strong>maiores</strong> do que o valor do acerto do teste;</p>
 </li>
 <li>
-<p>Será considerado <code>Falha Crítica</code> rolagens que forem entre 96 e 100. Testes com acerto maior ou igual a 86 não podem ter <code>Falha Crítica</code>;</p>
+<p>Será considerado <code>Falha Crítica</code> rolagens que forem entre <strong>96 e 100</strong>. Testes com acerto maior ou igual a 86 não podem ter <code>Falha Crítica</code>;</p>
 </li>
 <li>
-<p>Testes com acerto maior ou igual a 91 têm <code>Sucesso Automático</code>, sem necessidade de rolagem.</p>
+<p>Testes com acerto maior ou igual a <strong>91</strong> têm <code>Sucesso Automático</code>, sem necessidade de rolagem.</p>
 </li>
 </ul>
 </div>
@@ -2237,7 +2291,7 @@ Teste de Carisma
 <h2 id="combat">Combate</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Quando o diálogo não resolve - ou você sequer pensou em dialogar - o único jeito de resolver um impasse é em um combate. Este capítulo detalha como ele se dá em <strong>LPD100</strong>.</p>
+<p>Quando o diálogo não resolve - ou você sequer pensou em dialogar - o único jeito de resolver um impasse é em um combate. Este capítulo detalha como ele se dá em <strong>LPD100</strong>. Lembre-se bem do sub-capítulo Atributos Secundários pois eles serão mencionados com frequência aqui.</p>
 </div>
 <div class="paragraph">
 <p>Primeiro, define-se a ordem dos turnos de acordo com a <code>[INI]</code> de cada combatente. Quem tiver a maior age primeiro. Em caso de empate:</p>
@@ -2273,7 +2327,7 @@ Movimentar
 Atacar
 </td>
 <td class="hdlist2">
-<p>Escolhe uma arma equipada e realiza um ataque básico ou uma habilidade ofensiva;</p>
+<p>Escolhe uma arma equipada para atacar e realiza um ataque básico ou uma habilidade ofensiva;</p>
 </td>
 </tr>
 <tr>
@@ -2331,7 +2385,7 @@ Dano
 <p>Em caso de <code>sucesso crítico</code>, aplicam-se os efeitos críticos de acordo com o tipo de dando que arma causa.</p>
 </div>
 <div class="paragraph">
-<p>Em caso de <code>falha</code>, o personagem defensor poderá realizar um contra-ataque básico com acerto garantido se tiver alcance para o mesmo. Caso seja uma <code>falha crítica</code>, o contra-ataque do defensor será crítico!</p>
+<p>Em caso de <code>falha</code>, o personagem defensor poderá realizar um contra-ataque básico com acerto garantido se tiver alcance para o mesmo. Caso seja uma <code>falha crítica</code>, o contra-ataque do defensor também será crítico!</p>
 </div>
 <div class="paragraph">
 <p>As regras para permissão ou não de <code>sucessos e falhas críticas</code> também se aplicam aqui.</p>
@@ -2347,18 +2401,6 @@ Dano
 </td>
 <td class="content">
 Lembre-se que armas que atacam à distância possuem alcance "2 ou mais", isto é, um personagem equipado com esse tipo de arma <strong>não</strong> poderá atacar, nem contra-atacar, oponentes que estejam 1 "grid" a sua frente!
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Para melhor interpretação do combate, imagine o campo de batalha como um grande tabuleiro de xadrez.
 </td>
 </tr>
 </table>
@@ -2423,7 +2465,7 @@ Para melhor interpretação do combate, imagine o campo de batalha como um grand
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Detectar</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Suporte</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 a 6 <em>grids</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6 <em>grids</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 [PT]</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sente a presença de armadilhas e inimigos escondidos no raio de alcance do usuário caso tenha sucesso em um Teste de Visão, Olfato ou Audição</p></td>
 </tr>
@@ -2715,12 +2757,12 @@ Desmaio <strong>não</strong> elimina os efeitos de outras condições adversas 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Alta</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restaurantes, tavernas de luxo, etc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restaurantes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recupera 50% do <code>[PV]</code> e do <code>[PT]</code> máximo</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Média</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Barracas, lanchonetes, tavernas pequenas, etc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barracas, lanchonetes, tavernas, etc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recupera 25% do <code>[PV]</code> e do <code>[PT]</code> máximo</p></td>
 </tr>
 <tr>
@@ -2755,12 +2797,12 @@ Desmaio <strong>não</strong> elimina os efeitos de outras condições adversas 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Alta</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hoteis, estalagens e tavernas de luxo, etc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hoteis, Estalagens, etc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recupera 100% do <code>[PV]</code> e do <code>[PT]</code> máximo</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Média</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Acampamentos, estalagens comuns, etc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acampamentos, tavernas, etc</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recupera 50% do <code>[PV]</code> e do <code>[PT]</code> máximo</p></td>
 </tr>
 <tr>
@@ -2860,8 +2902,8 @@ Uma refeição boa e um descanso médio já são o suficiente para recuperar tod
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.2<br>
-Last updated 2020-05-16 14:16:04 -0300
+Version 0.3<br>
+Last updated 2020-05-23 16:14:12 -0300
 </div>
 </div>
 </body>
