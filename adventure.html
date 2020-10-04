@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Autor">
-<title>LPD100 - Adventure Development Kit</title>
+<title>LPD100 - Aventura de Teste</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,35 +440,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>LPD100 - Adventure Development Kit</h1>
+<h1>LPD100 - Aventura de Teste</h1>
 <div class="details">
 <span id="author" class="author">Autor</span><br>
 <span id="email" class="email"><a href="mailto:caiogevegir@hotmail.com">caiogevegir@hotmail.com</a></span><br>
 <span id="revnumber">version 0.1,</span>
-<span id="revdate">2020-05-24</span>
+<span id="revdate">2020-10-03</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#principles">Fundamentos</a></li>
-<li><a href="#cities">Cidades</a>
-<ul class="sectlevel2">
-<li><a href="#_estabelecimentos_comuns">Estabelecimentos Comuns</a></li>
-<li><a href="#_exemplos_de_cidade">Exemplos de Cidade</a></li>
-</ul>
-</li>
-<li><a href="#dungeons">Masmorras</a>
-<ul class="sectlevel2">
-<li><a href="#_arquitetando_uma_masmorra">Arquitetando uma Masmorra</a></li>
-<li><a href="#_preenchendo_sua_masmorra">Preenchendo sua Masmorra</a></li>
-<li><a href="#_exemplos_de_masmorra">Exemplos de Masmorra</a></li>
-</ul>
-</li>
-<li><a href="#npc">NPC (Non-Playable Characters)</a>
-<ul class="sectlevel2">
-<li><a href="#_desenvolvendo_um_npc">Desenvolvendo um NPC</a></li>
-</ul>
-</li>
+<li><a href="#races">Raças</a></li>
+<li><a href="#classes">Classes</a></li>
 </ul>
 </div>
 </div>
@@ -477,450 +461,134 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="principles">Fundamentos</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>O objetivo deste manual é fornecer, ao mestre e aos jogadores, os conhecimentos e as dicas necessários para que vocês possam montar sua aventura em <strong>LPD100</strong>, como desenvolvimento e ambientação de cidades, masmorras, biomas, <em>npc</em>, e um pouquinho de <em>storytelling</em>.</p>
-</div>
-<div class="paragraph">
-<p>Apenas para formalizar, entende-se como <strong>mestre</strong> aquele quem planeja, narra e conta a história a ser aventurada e, <strong>jogadores</strong>, aqueles quem participam da aventura a ser contada e contribuem para o seu enriquecimento. Também define-se como <strong><em>npc</em></strong> (<em>non-playable character</em>) os demais personagens que não são controlados por jogadores (e, sim, pelo mestre), mas que ainda poderão ser relevantes para a história.</p>
-</div>
-<div class="paragraph">
-<p>Conhecimento é poder. Por isso, sinta-se à vontade para utilizar conhecimentos de outros manuais e sistemas em <strong>LPD100</strong>, assim como usar os conhecimentos deste sistema em outros. Fique à vontade também para dar sugestões de melhorias neste manual, assim como em outros que foram escritos para este sistema.</p>
-</div>
-<div class="paragraph">
-<p>Entretanto, como este manual ainda é uma extensão do <strong>LPD100</strong>, ele ainda usará <em>grids</em> em algumas exemplificações. Portanto, recomenda-se fortemente o uso de um para melhor entendimento dos conceitos que aqui serão abordados.</p>
+<p>O objetivo desde documento é prover uma campanha de RPG para o sistema <strong>LPD100</strong> que possa ser divertida e ao mesmo tempo um plano de testes para balancear o sistema.</p>
 </div>
 </div>
 </div>
 <div class="sect1 text-justify">
-<h2 id="cities">Cidades</h2>
+<h2 id="races">Raças</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cidades são locais chave para o desenvolvimento da aventura pois serão onde a maioria das interações sociais irão ocorrer: informações são adquiridas, estômagos são preenchidos, feridas são curadas, corpos descansam, personagens se conhecem melhor, etc.</p>
-</div>
-<div class="paragraph">
-<p>Embora já tenhamos uma definição bem enraizada em nossas mentes sobre a palavra, para simplificar e generalizar o termo durante o manual, entende-se como "cidade" qualquer conjunto residencial, comercial e/ou industrial em um espaço delimitado de múltiplos tamanhos possíveis. Ou seja, cidades podem ser: metrópoles, conglomerados, capitais, centros urbanos, cidadelas, vilas, vilarejos, aldeias, acampamentos nômades, colônias espaciais, etc.</p>
-</div>
-<div class="sect2">
-<h3 id="_estabelecimentos_comuns">Estabelecimentos Comuns</h3>
-<div class="paragraph">
-<p>Independentemente do tamanho da cidade, ela sempre terá pelo menos um dos estabelecimentos abaixo. Mesmo que não haja uma representação gráfica delas, é importante os jogadores terem noção da existência de cada estabelecimento relevante da cidade:</p>
-</div>
-<div class="sect3">
-<h4 id="_praças">Praças</h4>
-<div class="paragraph">
-<p>Geralmente, é o ponto central de uma cidade. Decorada com bancos, estátuas, chafarizes e/ou um simples jardim, é um local ao ar livre geralmente movimentado por ser o ponto de encontro dos habitantes. É uma área que costuma ter <em>npcs</em> com informações corriqueiras da cidade, ou apenas querendo jogar conversa fora. Também pode haver pequenos comerciantes vendendo lanches, missangas, brinquedos, etc.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_tavernas">Tavernas</h4>
-<div class="paragraph">
-<p>A birita nossa de cada dia. Tavernas, bares, <em>pubs</em>, dentre outros costumam ser os locais mais frequentados em cidades, especialmente durante a noite. Por isso, nestes estabelecimentos, você quase sempre encontrará os mais excêntricos <em>npcs</em> e informações que talvez não sejam de conhecimento público, ou apenas rumores. Algumas tavernas também oferecem os serviços de hospedagem e refeições básicas.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_restaurantes">Restaurantes</h4>
-<div class="paragraph">
-<p>Diferentemente de tavernas, restaurantes possuem um serviço mais especializado no preparo de refeições. Refeições de Alta Qualidade poderão ser feitas aqui.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_estalagens">Estalagens</h4>
-<div class="paragraph">
-<p>Seguindo a mesma lógica, estalagens, albergues, hotéis, etc possuem um serviço mais especializado em hospedagem. Descansos de Alta Qualidade poderão ser feitos aqui.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_feira">Feira</h4>
-<div class="paragraph">
-<p>Desde mercados a ruas com barracas, feiras basicamente são conjuntos de estabelecimentos comerciais que vendem os mais variados produtos: comidas, acessórios e até mesmo equipamentos</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_templos">Templos</h4>
-<div class="paragraph">
-<p>Se a cidade, reino ou país cultua algum santo ou deus, espera-se que haja um templo dedicado à eles para realizar os cultos e onde os fiéis possam fazer suas orações. Templos geralmente também terão um missionário chefe responsável por administrar o estabelecimento. Algumas cidades podem ter múltiplos templos para cultuar múltiplas religiões.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_cemitérios">Cemitérios</h4>
-<div class="paragraph">
-<p>Cidades também costumam ter um local dedicado para dar descanso àqueles que já se foram e onde os vivos possam prestar suas homenagens. Cemitérios também podem ter aspectos religiosos dependendo da religião cultuada.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_hospitais">Hospitais</h4>
-<div class="paragraph">
-<p>Um estabelecimento essencial para o desenvolvimento de uma cidade, hospitais curam e tratam os enfermos, inclusive seus aliados desmaiados e à beira da morte. Seu tamanho pode ir de uma simples casa a um posto de saúde, ou até mesmo uma clínica de alta tecnologia.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_ferreiros">Ferreiros</h4>
-<div class="paragraph">
-<p>Outro importante estabelecimento, é aqui onde os aventureiros costumam aprimorar e reparar seus equipamentos. Ferreiros podem ter informações interessantes sobre bastidores militares e outros conflitos, além de vender armas e vestimentas novas.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_escolas">Escolas</h4>
-<div class="paragraph">
-<p>Se a cidade possui um bom grau de investimento em educação, haverá pelo menos uma escola, faculdade, universidade, academia, etc relevante nela. Escolas podem agregar múltiplas áreas do saber, assim como se especializar em uma única ou pequeno conjunto de áreas. Sempre é tempo de aprender coisas novas!</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_bibliotecas">Bibliotecas</h4>
-<div class="paragraph">
-<p>Seguindo a mesma lógica das escolas, cidades que investem em educação costumam ter boas bibliotecas que agregam o conhecimento para jamais serem esquecidos.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_prefeitura">Prefeitura</h4>
-<div class="paragraph">
-<p>À grosso modo, prefeituras são estabelecimentos onde o chefe da cidade vive - prefeito, rei, imperador, cacique, etc - ou onde as demais autoridades se reúnem para tomar decisões políticas sobre ela. Pode ser de uma câmara municipal, um casarão, uma tenda, um castelo, etc.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_delegacia">Delegacia</h4>
-<div class="paragraph">
-<p>Quartéis, prisões, brigadas, etc. Define-se como delegacia o estabelecimento onde as forças militares da cidade se concentram ou atendem a população em eventuais reportagens de atividades criminosas. Também podem encarcerar os criminosos.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Dependendo do tamanho, uma cidade não só pode ter grandes estabelecimentos, mas também múltiplos estabelecimentos do mesmo tipo.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exemplos_de_cidade">Exemplos de Cidade</h3>
-<div class="paragraph">
-<p>Este sub-capítulo irá mostrar exemplos de cidades e implementam os estabelecimentos acima:</p>
-</div>
-<div class="sect3">
-<h4 id="_celdic_the_legend_of_heroes_trails_of_cold_steel">Celdic (The Legend of Heroes: Trails of Cold Steel)</h4>
-<div class="paragraph">
-<p>Celdic é uma cidade mercantil dividida em dois distritos: o central e o comercial. No distrito central, temos uma taverna com hospedaria, uma prefeitura, uma loja de armamentos e uma pequena livraria construídas em torno de uma praça. Nas ruas adjacentes ao centro, temos edifícios residenciais, um templo e um posto policial da guarda da província.</p>
-</div>
-<div class="paragraph">
-<p>Enquanto isso, no distrito comercial, temos diversas barracas com as mais diversas mercadorias locais e importadas, além de restaurantes.</p>
-</div>
-<div class="paragraph">
-<p>Celdic é uma boa referência para quem deseja desenvolver cidades pequenas e/ou a partir de um "centro".</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_goldenrod_pokémon_gsc">Goldenrod (Pokémon G/S/C)</h4>
-<div class="paragraph">
-<p>Goldenrod é um bom exemplo de cidades "lineares", isto é, cidades que crescem em torno de uma estrada ou rua principal.</p>
-</div>
-<div class="paragraph">
-<p>Mesmo no universo Pokémon, temos a presença de nossos estabelecimentos comuns, ou uma adaptação deles: o Centro Pokémon atuando como um Hospital, o <em>Mart</em> sendo nosso mercado, o Ginásio servindo, de forma bem grosseira, como uma delegacia, uma vez que alguns líderes possuem certa autoridade protetora em sua cidade, etc. Além de outros estabelecimentos como prédios residenciais, uma estação de rádio, <em>arcades</em> e até mesmo túneis subterrâneos atuando como masmorras (falaremos delas em um capítulo posterior&#8230;&#8203;).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_crossbell_the_legend_of_heroes_trails_from_zero">Crossbell (The Legend of Heroes: Trails from Zero)</h4>
-<div class="paragraph">
-<p>Crossbell é um ótimo exemplo de cidade grande e que é dividida em múltiplos distritos de acordo com suas funções.</p>
-</div>
-<div class="paragraph">
-<p>Temos o distrito central, com uma praça que reúne os principais restaurantes e grandes lojas da cidade; o distrito residencial convencional, com uma pequena mercearia e complexos residenciais; o distrito residencial de luxo, com grandes mansões; o distrito "oriental", que é uma pequena colônia de moradores e comerciantes do país vizinho; o distrito turístico, ocupado por teatros, cassinos e hotéis; o distrito administrativo, que reúne a prefeitura, a delegacia e um museu; dentre outros distritos.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_village_minecraft">Village (Minecraft)</h4>
-<div class="paragraph">
-<p>Por que não citá-las? Por mais simples que sejam, elas possuem boa parte dos estabelecimentos já citados: bibliotecas, ferreiros, médicos, fazendeiros&#8230;&#8203; Além de todos os <em>npcs</em> serem comerciantes, comprando e vendendo produtos equivalentes à sua profissão, e utilizando esmeraldas como moeda de troca.</p>
-</div>
-<div class="paragraph">
-<p>Cidades possuem múltiplas formas e funções. Desenvolva cidades que estejam de acordo com o que elas representarão na história. Há muitas outras cidades reais e fictícias que podem ser utilizadas como inspiração também!</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1 text-justify">
-<h2 id="dungeons">Masmorras</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Se as cidades são os locais onde personagens descansam, se informam e fazem os preparativos para a próxima missão, as masmorras são onde a ação acontece: monstros, enigmas, decisões arriscadas, etc.</p>
-</div>
-<div class="paragraph">
-<p>Mais uma vez, em nome da simplicidade, masmorras serão definidas como qualquer lugar no universo onde possa haver "ação". Ou seja, não serão consideradas masmorras apenas os clássicos castelos, calabouços, templos, cavernas ou demais ambientes fechados, mas também florestas, estradas, desertos, montanhas e qualquer outro lugar onde as ações aplicadas acima.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Dependendo dos motivos da história, uma Cidade também poderá ser uma Masmorra.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_arquitetando_uma_masmorra">Arquitetando uma Masmorra</h3>
-<div class="paragraph">
-<p>Uma boa masmorra possui uma estrutura de início-meio-fim bem definida, além de proporcionar desafios, emoção e imersão à história. Você pode começar a planejar a sua se fazendo as seguintes perguntas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Qual será o seu tema ou bioma?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Templo na floresta?</p>
-</li>
-<li>
-<p>Trilha nas montanhas?</p>
-</li>
-<li>
-<p>Estrada nas planícies?</p>
-</li>
-<li>
-<p>Travessia de deserto?</p>
-</li>
-<li>
-<p>Fortaleza de uma cidade?</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Qual será a principal ameaça?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Lar ou grande quantidade de monstros?</p>
-</li>
-<li>
-<p>Esconderijo de bandidos?</p>
-</li>
-<li>
-<p>Armadilhas e Maldições?</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Qual será a motivação da exploração?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Tesouros escondidos?</p>
-</li>
-<li>
-<p>Recompensas pós-missão?</p>
-</li>
-<li>
-<p>Neutralizar as ameaças?</p>
-</li>
-<li>
-<p>Informações relevantes para a campanha?</p>
-</li>
-<li>
-<p>Resgate de personagens queridos?</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Qual será a arquitetura?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Salão central com salas menores nas extremidades?</p>
-</li>
-<li>
-<p>Corredor linear com salas ramificadas?</p>
-</li>
-<li>
-<p>Labiríntico?</p>
-</li>
-<li>
-<p>Inspirada no desenho de algum animal ou objeto?</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>O que será exigido, ou testado, nos exploradores?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Força?</p>
-</li>
-<li>
-<p>Destreza?</p>
-</li>
-<li>
-<p>Vigor?</p>
-</li>
-<li>
-<p>Inteligência?</p>
-</li>
-<li>
-<p>Agilidade?</p>
-</li>
-<li>
-<p>Carisma?</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Uma masmorra não necessariamente precisa estar atrelada apenas a uma dessas respostas. Sinta-se livre para escolher novas e/ou múltiplas opções de acordo com a sua campanha.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Trate suas masmorras como "pontos turísticos". Elas precisam ser atrativas o suficiente para que os jogadores se interessem em explorá-las!
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_preenchendo_sua_masmorra">Preenchendo sua Masmorra</h3>
-<div class="paragraph">
-<p>Uma boa masmorra também possui o equilíbrio entre batalhas, armadilhas, enigmas e informações. Os jogadores não só precisarão ficar mais fortes e mais espertos, mas também adquirir o conhecimento necessário para prosseguirem em suas jornadas. Por isso, planeje bem o roteiro que seus visitantes terão ao explorá-la!</p>
-</div>
-<div class="sect3">
-<h4 id="_batalhas">Batalhas</h4>
-<div class="paragraph">
-<p>Comece com inimigos fracos e que condizem com o tema da masmorra. Por exemplo, cobras ou aranhas em ambientes florestais; escorpiões em ambientes áridos; esqueletos e fantasmas em cemitérios ou ambientes sombrios; guardas ou capangas em uma fortaleza e por aí vai. Dessa forma, vá aumentando gradativamente a quantidade e dificuldade dos inimigos até o clímax do confronto final. O capítulo <em>NPCs</em> irá abordar essa construção com mais detalhes.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_enigmas">Enigmas</h4>
-<div class="paragraph">
-<p>Quebre um pouco a quarta parede e não se limite apenas a desafiar os personagens. Coloque os jogadores reais para pensarem também!</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_armadilhas">Armadilhas</h4>
-<div class="paragraph">
-<p>Explore ao máximo as qualidades e defeitos dos atributos de cada personagem em diversos testes. E, é claro, esteja preparado para tanto quando forem bem-sucedidos quanto fracassarem.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_informação">Informação</h4>
-<div class="paragraph">
-<p>Não se prenda somente a missão do momento. Aproveite para colocar informações e detalhes que poderão ser aproveitados na história a longo prazo. Continuidade é uma qualidade muito apreciada em uma boa campanha!</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_use_a_aleatoriedade_ao_seu_favor">Use a Aleatoriedade ao seu Favor</h4>
-<div class="paragraph">
-<p>Embora você tenha muitos planos de calabouços, armadilhas, enigmas, monstros, etc. Às vezes você pode se sentir exausto ao elaborar uma masmorra que seja demasiadamente grande. Uma opção é simplesmente colocar salas <em>fillers</em>, ou auxiliares, cujo conteúdo será determinado aleatoriamente de acordo com uma rolagem de dado:</p>
+<p>Esta aventura irá trabalhar com cinco raças base construídas a partir das regras do <strong>LPD100</strong>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Rolagem</th>
-<th class="tableblock halign-left valign-top">Resultado</th>
+<th class="tableblock halign-left valign-top">Raça</th>
+<th class="tableblock halign-left valign-top">Efeitos</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 a 10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A sala está vazia e há itens interessantes como poções, pergaminhos, cordas, livros, etc&#8230;&#8203; Jogadores podem fazer uma pequena pausa para refeições e o equivalmente a um descanso de baixa qualidade.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Humano</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Nenhuma</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11 a 25</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A sala está simplesmente vazia. Jogadores ainda podem fazer seu descanso aqui.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anão</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Uma entre Pele Rígida e Sentidos Aguçados [Visão]<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Transtorno [Fúria]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">26 a 75</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A sala possui uma pequena quantidade de monstros.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Uma entre Genialidade e Sentidos Aguçados [Olfato]<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Ponto Fraco [Cortante]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">76 a 100</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A sala possui uma grande quantidade de monstros, ou uma pequena quantidade de monstros fortes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Orc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Uma entre Pele Rígida e Pontos de Vida Extra<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Inculto<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goblin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Uma entre Genialidade e Pontos de Técnica Extra<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Ponto Fraco [Contusão]</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exemplos_de_masmorra">Exemplos de Masmorra</h3>
-<div class="paragraph">
-<p>Seguem alguns bons exemplos de masmorras ou jogos, como um todo, que poderão servir de inspiração para arquitetar as suas:</p>
-</div>
-<div class="sect3">
-<h4 id="_the_legend_of_zelda">The Legend of Zelda</h4>
-<div class="paragraph">
-<p>O primeiro jogo da franquia, lançado há mais de 30 anos para o Nintendinho, embora não seja muito amigável com novos jogadores, traz a receita que é seguida pela franquia até hoje: entre na masmorra, se depare com portas trancadas, explore as portas abertas, derrote monstros, pegue as chaves que eles carregam, abra as portas trancadas para revelar novos caminhos, se depare com novos enigmas, enfrente monstros mais fortes, obtenha novos itens e repita o processo até chegar na sala do chefe.</p>
-</div>
-<div class="paragraph">
-<p>Como um adicional, repare, após obter os mapas, que as salas geralmente formam um objeto quando em conjunto: luas, serpentes, dragões, espadas, escudos, etc.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_etrian_odyssey">Etrian Odyssey</h4>
-<div class="paragraph">
-<p>Uma franquia menos conhecida, mas muito interessante para o aprendizado de desenvolvimento de masmorras. Etrian Odyssey coloca o jogador na posição de explorador e cartógrafo. Ou seja, além de explorar os labirintos principais do jogo, você também está encarregado de fazer uma boa representação gráfica das seções que está explorando. Nessa representação, você pode marcar, além dos caminhos percorridos, tesouros encontrados, monstros perigosos, pontos de descanso e demais pontos de interesse para fazer uma nova visita.</p>
-</div>
-<div class="paragraph">
-<p>É uma ótima sugestão para quem deseja construir uma masmorra puramente baseada em <em>grids</em>, e não em salas.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_pokémon">Pokémon</h4>
-<div class="paragraph">
-<p>As rotas de Pokémon nos apresentam dois conceitos importantes: é possível seguir pela estrada sem perigos se soubermos como evitar encontro com monstros, assim como podemos, a qualquer momento, provocar esses encontros se soubermos onde procurá-los.</p>
-</div>
-<div class="paragraph">
-<p>Outro bom exemplo é a Victory Road, a última "masmorra" antes de você desafiar os mais fortes treinadores da jornada. Servindo como teste final antes desse desafio, a Victory Road é uma caverna labiríntica cheia de enigmas, ambientes escuros e encontros com monstros e treinadores de alto nível.</p>
-</div>
-</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Você pode escolher a segunda opção de virtude da raça como adicional se quiser (Ex: um Anão com pele rígida E sentidos aguçados)
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1 text-justify">
-<h2 id="npc">NPC (Non-Playable Characters)</h2>
+<h2 id="classes">Classes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Temos cidades para descansar e masmorras para explorar. Agora, precisamos popular nossa aventura. De forma genérica, NPCs são todos os outros personagens que não são controlados pelos jogadores - e, sim, pelo mestre -, desde monstros a habitantes de uma cidade.</p>
+<p>Esta aventura irá trabalhar com quatro classes-base construídas a partir das regras do <strong>LPD100</strong>.</p>
 </div>
-<div class="paragraph">
-<p>NPCs são componentes importantíssimos pois estão diretamente relacionados com a interação dos jogadores com o universo. São os monstros que você enfrenta para ficar mais forte, aquela pessoa misteriosa que vai te dar pistas de como avançar na história, aquela criança brincalhona que irá dar um alívio cômico à sessão e por aí vai.</p>
-</div>
-<div class="paragraph">
-<p>Bons NPCs serão tão inesquecíveis para a história quanto os jogadores e contribuem bastante para a imersão e continuidade da aventura. Imagine, por exemplo, que aquele comerciante que os jogadores salvaram de monstros no começo da campanha veio a enriquecer após algum tempo e decidiu pagar a estadia e os equipamentos do grupo como forma de agradecimento em um momento de perrengue? Ou que aquela menina que era considerada frágil e indefesa se inspirou nas ações do grupo e decidiu se alistar no exército ou estudar magia por conta própria, eventualmente se tornando forte o bastante para ajudá-los em futuras missões? Ou, por que não, um cidadão que teve o pedido de socorro ignorado, mesmo que não-intencionalmente, decidiu levar para o lado pessoal e partiu atrás do grupo buscando vingança, ou ele tem um conhecido que ficou sabendo do incidente e criou uma certa antipatia pelos jogadores? As possibilidades são inúmeras. <strong>Faça os jogadores sentirem que suas decisões na campanha realmente importam!</strong></p>
-</div>
-<div class="sect2">
-<h3 id="_desenvolvendo_um_npc">Desenvolvendo um NPC</h3>
-<div class="paragraph">
-<p>Em uma aventura, existem "dois" tipos de NPCs: aqueles que serão pouco relevantes para a história, e talvez só existam para dar uma opção de diálogo extra aos jogadores, e os que serão completamente relevantes</p>
-</div>
-<div class="paragraph">
-<p>NPCs memoráveis costumam ter sua própria ficha, ou uma versão compacta dela.</p>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Classe</th>
+<th class="tableblock halign-left valign-top">Efeitos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lutador</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Força<br>
++1 em Destreza ou Vigor<br>
++5 na Taxa de Acerto Crítico</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Atirador</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Destreza<br>
++1 em Inteligência ou Agilidade<br>
++1 <em>grid</em> em Alcance<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feiticeiro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Inteligência<br>
++1 em Destreza ou Carisma<br>
++1 em [FA] mágico e [FD] mágico<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ladino</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Agilidade<br>
++1 em Destreza ou Carisma<br>
++10 em Esquiva<br></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2020-07-24 23:12:46 -0300
+Last updated 2020-10-03 17:27:14 -0300
 </div>
 </div>
 </body>
