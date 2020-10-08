@@ -444,8 +444,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Autor</span><br>
 <span id="email" class="email"><a href="mailto:caiogevegir@hotmail.com">caiogevegir@hotmail.com</a></span><br>
-<span id="revnumber">version 0.1,</span>
-<span id="revdate">2020-10-03</span>
+<span id="revnumber">version 0.2,</span>
+<span id="revdate">2020-10-08</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -453,6 +453,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#principles">Fundamentos</a></li>
 <li><a href="#races">Raças</a></li>
 <li><a href="#classes">Classes</a></li>
+<li><a href="#Equipments">Equipamentos</a>
+<ul class="sectlevel2">
+<li><a href="#_armas">Armas</a></li>
+<li><a href="#_vestimentas">Vestimentas</a></li>
+<li><a href="#_escudo">Escudo</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -470,6 +477,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="paragraph">
 <p>Esta aventura irá trabalhar com cinco raças base construídas a partir das regras do <strong>LPD100</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Resumidamente, as raças possuem duas <strong>virtudes</strong> (uma fixa e outra à sua escolha) e uma <strong>fraqueza</strong> natural cada. Com exceção de humanos, que possuem apenas uma virtude livre, mas não possuem fraquezas naturais.</p>
+</div>
+<div class="paragraph">
+<p>Um personagem ainda poderá adquirir uma terceira virtude (ou segunda, se for humano), desde que ele também adquira mais uma fraqueza.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -491,58 +504,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 - Nenhuma</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anão</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tauren (Bovinos, Equinos, Suínos, etc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
-- Uma entre Pele Rígida e Sentidos Aguçados [Visão]<br>
-- Mais uma qualquer à sua escolha<br>
-<strong>Fraqueza</strong><br>
-- Transtorno [Fúria]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elfo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
-- Uma entre Genialidade e Sentidos Aguçados [Olfato]<br>
-- Mais uma qualquer à sua escolha<br>
-<strong>Fraqueza</strong><br>
-- Ponto Fraco [Cortante]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Orc</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
-- Uma entre Pele Rígida e Pontos de Vida Extra<br>
+- Pele Rígida [Escolha Uma]<br>
 - Mais uma qualquer à sua escolha<br>
 <strong>Fraqueza</strong><br>
 - Inculto<br></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Goblin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Talpa (Coelhos, Ratos e Roedores em geral)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
-- Uma entre Genialidade e Pontos de Técnica Extra<br>
+- Genialidade<br>
 - Mais uma qualquer à sua escolha<br>
 <strong>Fraqueza</strong><br>
 - Ponto Fraco [Contusão]</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avien (Aves em geral)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Vôo<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Ponto Fraco [Perfurante]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Draco (Dragões, Lagartos e Anfíbios em geral)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Virtudes</strong><br>
+- Invisibilidade<br>
+- Mais uma qualquer à sua escolha<br>
+<strong>Fraqueza</strong><br>
+- Ponto Fraco [Cortante]</p></td>
+</tr>
 </tbody>
 </table>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Você pode escolher a segunda opção de virtude da raça como adicional se quiser (Ex: um Anão com pele rígida E sentidos aguçados)
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1 text-justify">
 <h2 id="classes">Classes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Esta aventura irá trabalhar com quatro classes-base construídas a partir das regras do <strong>LPD100</strong>.</p>
+<p>Esta aventura irá trabalhar com cinco classes-base construídas a partir das regras do <strong>LPD100</strong>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -575,6 +576,12 @@ Você pode escolher a segunda opção de virtude da raça como adicional se quis
 +1 em [FA] mágico e [FD] mágico<br></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curandeiro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Carisma<br>
++1 em Inteligência ou Vigor<br>
+Itens e habilidades de cura curam 2 [PV] a mais</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ladino</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">+1 em Agilidade<br>
 +1 em Destreza ou Carisma<br>
@@ -584,11 +591,239 @@ Você pode escolher a segunda opção de virtude da raça como adicional se quis
 </table>
 </div>
 </div>
+<div class="sect1 text-justify">
+<h2 id="Equipments">Equipamentos</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_armas">Armas</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Arma</th>
+<th class="tableblock halign-left valign-top">Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adaga</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Muito Leve<br>
+Cortante e Perfurante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Espada Curta</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Leve<br>
+Cortante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Espada Longa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Normal<br>
+Cortante<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machado Pequeno</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Normal<br>
+Cortante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machado Grande</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Pesado<br>
+Cortante<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Martelo Pequeno</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Pesado<br>
+Contusão<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Martelo Grande</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Muito Pesado<br>
+Contusão<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lança Pequena</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Normal<br>
+Perfurante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lança Grande</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corpo-a-Corpo<br>
+Físico<br>
+Pesado<br>
+Perfurante<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Besta de Mão</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curta Distância<br>
+Físico<br>
+Leve<br>
+Perfurante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arco-e-Flecha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longa Distância<br>
+Físico<br>
+Normal<br>
+Perfurante<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bumerangue Pequeno</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curta Distância<br>
+Físico<br>
+Normal<br>
+Contusão<br>
+Uma Mão<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bumerangue Grande</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longa Distância<br>
+Físico<br>
+Pesado<br>
+Contusão<br>
+Duas Mãos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tomo do Vento</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curta Distância<br>
+Mágico<br>
+Leve<br>
+Cortante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tomo do Gelo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curta Distância<br>
+Mágico<br>
+Leve<br>
+Perfurante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tomo da Terra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curta Distância<br>
+Mágico<br>
+Leve<br>
+Contusão<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cajado do Vento</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longa Distância<br>
+Mágico<br>
+Normal<br>
+Cortante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cajado do Gelo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longa Distância<br>
+Mágico<br>
+Normal<br>
+Perfurante<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cajado da Terra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longa Distância<br>
+Mágico<br>
+Normal<br>
+Contusão<br>
+Uma Mão</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cajado de Cura</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arma de Cura<br>
+Normal<br>
+Uma Mão</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_vestimentas">Vestimentas</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Vestimenta</th>
+<th class="tableblock halign-left valign-top">Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roupa Comum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistente<br>
+Normal<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traje de Batalha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistente<br>
+Leve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resiliente<br>
+Leve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cota de Malha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistente<br>
+Pesado</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Armadura</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistente<br>
+Muito Pesado</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_escudo">Escudo</h3>
+<div class="paragraph">
+<p>Pode ser equipado por qualquer personagem que carregue uma arma de <strong>Uma Mão</strong>.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.1<br>
-Last updated 2020-10-03 17:27:14 -0300
+Version 0.2<br>
+Last updated 2020-10-08 20:02:00 -0300
 </div>
 </div>
 </body>
