@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  font-family: 'Bookman Old Style', serif;
+  color: white;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: gray;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.blog-entry {
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  max-width: 80ch;
+}
+
+.blog-header-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-media {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  font-size: smaller;
+  text-align: center;
+}
