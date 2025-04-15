@@ -54,3 +54,12 @@ a:visited {
 .blog-spoiler {
   display: none;
 }
+
+p.blog-paragraph::first-letter {
+  float: left;
+  font-size: 4em;
+  font-family: 'Old English Text MT', serif;
+  font-weight: normal;
+  line-height: 1;
+  margin-right: 0.1em;
+}
