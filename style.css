@@ -20,10 +20,12 @@ img {
   margin: 1rem 0;
 }
 
+/*
 table, th, td {
   width: 100%;
   border: 1px solid;
 }
+*/
 
 a:link {
   color: white;
